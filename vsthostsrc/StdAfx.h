@@ -20,6 +20,14 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 ******************************************************************************/
 
+#define _CRT_SECURE_NO_WARNINGS
+#define NO_WARN_MBCS_MFC_DEPRECATION
+#pragma warning(disable : 4996)
+#pragma warning(disable : 4819)
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT _WIN32_WINNT_MAXVER
+#endif
+
 #if !defined(AFX_STDAFX_H__9052BAF7_9D44_11D5_8163_4000001054B2__INCLUDED_)
 #define AFX_STDAFX_H__9052BAF7_9D44_11D5_8163_4000001054B2__INCLUDED_
 

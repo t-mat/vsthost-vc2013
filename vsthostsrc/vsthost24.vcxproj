@@ -60,16 +60,19 @@
     <OutDir>.\TRelease24\</OutDir>
     <IntDir>.\TRelease24\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release24\</OutDir>
     <IntDir>.\Release24\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug24\</OutDir>
     <IntDir>.\Debug24\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
     <ClCompile>
@@ -80,7 +83,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\VST3 SDK\pluginterfaces\vst2.x;$(SolutionDir)..\ASIOSDK2.3\common;$(SolutionDir)..\ASIOSDK2.3\host\pc;$(SolutionDir)..\ASIOSDK2.3\host;..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;_DEBUGFILE;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\TRelease24\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\TRelease24\vsthost24.pch</PrecompiledHeaderOutputFile>
@@ -107,7 +110,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\TRelease24\vsthost24.exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -120,7 +123,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\VST3 SDK\pluginterfaces\vst2.x;$(SolutionDir)..\ASIOSDK2.3\common;$(SolutionDir)..\ASIOSDK2.3\host\pc;$(SolutionDir)..\ASIOSDK2.3\host;..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release24\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release24\vsthost24.pch</PrecompiledHeaderOutputFile>
@@ -147,7 +150,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\Release24\vsthost24.exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -161,7 +164,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\VST3 SDK\pluginterfaces\vst2.x;$(SolutionDir)..\ASIOSDK2.3\common;$(SolutionDir)..\ASIOSDK2.3\host\pc;$(SolutionDir)..\ASIOSDK2.3\host;..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug24\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -171,6 +174,8 @@
       <ObjectFileName>.\Debug24\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug24\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -191,34 +196,22 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\Debug24\vsthost24.exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\asiosdk2\common\asio.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
+    <ClCompile Include="..\ASIOSDK2.3\common\asio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4996</DisableSpecificWarnings>
     </ClCompile>
-    <ClCompile Include="..\asiosdk2\host\asiodrivers.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
+    <ClCompile Include="..\ASIOSDK2.3\host\asiodrivers.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4996</DisableSpecificWarnings>
     </ClCompile>
-    <ClCompile Include="..\asiosdk2\host\pc\asiolist.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
+    <ClCompile Include="..\ASIOSDK2.3\host\pc\asiolist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4996</DisableSpecificWarnings>
     </ClCompile>
     <ClCompile Include="AsioChannelSelectDialog.cpp" />
     <ClCompile Include="AsioHost.cpp" />
@@ -257,6 +250,7 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4996</DisableSpecificWarnings>
     </ClCompile>
     <ClCompile Include="vsthost.cpp" />
     <ClCompile Include="WaveDev.cpp" />
@@ -266,18 +260,12 @@
     <ResourceCompile Include="vsthost.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\asiosdk2\common\asio.h" />
-    <ClInclude Include="..\asiosdk2\common\asiosys.h" />
-    <ClInclude Include="..\asiosdk2\common\iasiodrv.h" />
-    <ClInclude Include="..\asiosdk2\host\asiodrivers.h" />
-    <ClInclude Include="..\asiosdk2\host\ginclude.h" />
-    <ClInclude Include="..\asiosdk2\host\pc\asiolist.h" />
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h" />
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffectx.h" />
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\vstfxstore.h" />
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h" />
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h" />
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h" />
+    <ClInclude Include="..\ASIOSDK2.3\common\asio.h" />
+    <ClInclude Include="..\ASIOSDK2.3\host\asiodrivers.h" />
+    <ClInclude Include="..\ASIOSDK2.3\host\pc\asiolist.h" />
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\aeffect.h" />
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\aeffectx.h" />
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\vstfxstore.h" />
     <ClInclude Include="AsioChannelSelectDialog.h" />
     <ClInclude Include="AsioHost.h" />
     <ClInclude Include="ChildFrm.h" />

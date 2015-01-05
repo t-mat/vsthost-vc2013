@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4c4f174b-3d42-480f-a89b-2b7ea327e053}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4e80ec46-d4d2-4e2f-ae97-4b3c7810aab0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{4ad1cd62-48bd-4f9d-b201-de3bb7e2b3a6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ASIO Files">
+      <UniqueIdentifier>{c091c081-4f40-4637-a400-657d4ae8f1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VSTSDK 2.4 Files">
+      <UniqueIdentifier>{5d2e1b6a-bbb3-409e-99f7-807a9f136366}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AsioChannelSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AsioHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CVSTHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSoundDev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffChainDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffEditWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffMidiChn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffSecWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mfcmidi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mfcwave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mididev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MidiKeybDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgNameDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShellSelDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmpVSTHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecAsioHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecDSound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specmidi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vsthost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveDev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\asiosdk2\common\asio.cpp">
+      <Filter>ASIO Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\asiosdk2\host\asiodrivers.cpp">
+      <Filter>ASIO Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\asiosdk2\host\pc\asiolist.cpp">
+      <Filter>ASIO Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vsthost.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AsioChannelSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AsioHost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVSTHost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSoundDev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffChainDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffEditWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffMidiChn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffSecWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mfcmidi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mfcwave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mididev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MidiKeybDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgNameDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShellSelDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmpVSTHost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecAsioHost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecDSound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specmidi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vsthost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vstsysex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveDev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\common\asio.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\host\asiodrivers.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\host\pc\asiolist.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\common\asiosys.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\host\ginclude.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\asiosdk2\common\iasiodrv.h">
+      <Filter>ASIO Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffectx.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\vstfxstore.h">
+      <Filter>VSTSDK 2.4 Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\backgnd.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\effedit.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\effinfo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\effparm.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\idr_main.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\kbd.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vsthost.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\manifest.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\vsthost.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

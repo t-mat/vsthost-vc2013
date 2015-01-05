@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Trace|Win32">
+      <Configuration>Release Trace</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>vsthost</ProjectName>
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{E5453EC4-9224-436A-AA3F-3DDE6ECF04DB}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+    <OutDir>.\TRelease24\</OutDir>
+    <IntDir>.\TRelease24\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release24\</OutDir>
+    <IntDir>.\Release24\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug24\</OutDir>
+    <IntDir>.\Debug24\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_DEBUGFILE;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\TRelease24\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\TRelease24\vsthost24.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\TRelease24\</ObjectFileName>
+      <ProgramDataBaseFileName>.\TRelease24\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\TRelease24\vsthost24.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0c07</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\TRelease24\vsthost24.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\TRelease24\vsthost24.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release24\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release24\vsthost24.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release24\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release24\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release24\vsthost24.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0c07</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release24\vsthost24.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release24\vsthost24.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\vstsdk2.4;..\vstsdk2.4\public.sdk\source\vst2.x;..\asiosdk2\common;..\asiosdk2\host;..\asiosdk2\host\pc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;USE_ASIO;WIN32;_WINDOWS;VST_FORCE_DEPRECATED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug24\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug24\vsthost24.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug24\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug24\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug24\vsthost24.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0c07</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug24\vsthost24.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug24\vsthost24.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\asiosdk2\common\asio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\asiosdk2\host\asiodrivers.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\asiosdk2\host\pc\asiolist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AsioChannelSelectDialog.cpp" />
+    <ClCompile Include="AsioHost.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ChildView.cpp" />
+    <ClCompile Include="CVSTHost.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DSoundDev.cpp" />
+    <ClCompile Include="EffChainDlg.cpp" />
+    <ClCompile Include="EffectWnd.cpp" />
+    <ClCompile Include="EffEditWnd.cpp" />
+    <ClCompile Include="EffMidiChn.cpp" />
+    <ClCompile Include="EffSecWnd.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="mfcmidi.cpp" />
+    <ClCompile Include="mfcwave.cpp" />
+    <ClCompile Include="mididev.cpp" />
+    <ClCompile Include="MidiKeybDlg.cpp" />
+    <ClCompile Include="ProgNameDlg.cpp" />
+    <ClCompile Include="ShellSelDlg.cpp" />
+    <ClCompile Include="SmpVSTHost.cpp" />
+    <ClCompile Include="SpecAsioHost.cpp" />
+    <ClCompile Include="SpecDSound.cpp" />
+    <ClCompile Include="specmidi.cpp" />
+    <ClCompile Include="SpecWave.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release Trace|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="vsthost.cpp" />
+    <ClCompile Include="WaveDev.cpp" />
+    <ClCompile Include="WorkThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vsthost.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\asiosdk2\common\asio.h" />
+    <ClInclude Include="..\asiosdk2\common\asiosys.h" />
+    <ClInclude Include="..\asiosdk2\common\iasiodrv.h" />
+    <ClInclude Include="..\asiosdk2\host\asiodrivers.h" />
+    <ClInclude Include="..\asiosdk2\host\ginclude.h" />
+    <ClInclude Include="..\asiosdk2\host\pc\asiolist.h" />
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h" />
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffectx.h" />
+    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\vstfxstore.h" />
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h" />
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h" />
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h" />
+    <ClInclude Include="AsioChannelSelectDialog.h" />
+    <ClInclude Include="AsioHost.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ChildView.h" />
+    <ClInclude Include="CVSTHost.h" />
+    <ClInclude Include="DSoundDev.h" />
+    <ClInclude Include="EffChainDlg.h" />
+    <ClInclude Include="EffectWnd.h" />
+    <ClInclude Include="EffEditWnd.h" />
+    <ClInclude Include="EffMidiChn.h" />
+    <ClInclude Include="EffSecWnd.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="mfcmidi.h" />
+    <ClInclude Include="mfcwave.h" />
+    <ClInclude Include="mididev.h" />
+    <ClInclude Include="MidiKeybDlg.h" />
+    <ClInclude Include="ProgNameDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ShellSelDlg.h" />
+    <ClInclude Include="SmpVSTHost.h" />
+    <ClInclude Include="SpecAsioHost.h" />
+    <ClInclude Include="SpecDSound.h" />
+    <ClInclude Include="specmidi.h" />
+    <ClInclude Include="SpecWave.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="vsthost.h" />
+    <ClInclude Include="vstsysex.h" />
+    <ClInclude Include="WaveDev.h" />
+    <ClInclude Include="WorkThread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\backgnd.bmp" />
+    <Image Include="res\effedit.ico" />
+    <Image Include="res\effinfo.ico" />
+    <Image Include="res\effparm.ico" />
+    <Image Include="res\idr_main.ico" />
+    <Image Include="res\kbd.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\vsthost.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\manifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\vsthost.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

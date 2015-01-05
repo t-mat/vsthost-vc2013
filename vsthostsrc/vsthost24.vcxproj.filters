@@ -102,13 +102,13 @@
     <ClCompile Include="WorkThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\asiosdk2\common\asio.cpp">
+    <ClCompile Include="..\ASIOSDK2.3\host\pc\asiolist.cpp">
       <Filter>ASIO Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\asiosdk2\host\asiodrivers.cpp">
+    <ClCompile Include="..\ASIOSDK2.3\host\asiodrivers.cpp">
       <Filter>ASIO Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\asiosdk2\host\pc\asiolist.cpp">
+    <ClCompile Include="..\ASIOSDK2.3\common\asio.cpp">
       <Filter>ASIO Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -205,40 +205,22 @@
     <ClInclude Include="WorkThread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\asiosdk2\common\asio.h">
+    <ClInclude Include="..\ASIOSDK2.3\host\pc\asiolist.h">
       <Filter>ASIO Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\asiosdk2\host\asiodrivers.h">
+    <ClInclude Include="..\ASIOSDK2.3\host\asiodrivers.h">
       <Filter>ASIO Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\asiosdk2\host\pc\asiolist.h">
+    <ClInclude Include="..\ASIOSDK2.3\common\asio.h">
       <Filter>ASIO Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\asiosdk2\common\asiosys.h">
-      <Filter>ASIO Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\asiosdk2\host\ginclude.h">
-      <Filter>ASIO Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\asiosdk2\common\iasiodrv.h">
-      <Filter>ASIO Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h">
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\aeffect.h">
       <Filter>VSTSDK 2.4 Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\aeffectx.h">
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\aeffectx.h">
       <Filter>VSTSDK 2.4 Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h">
-      <Filter>VSTSDK 2.4 Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h">
-      <Filter>VSTSDK 2.4 Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h">
-      <Filter>VSTSDK 2.4 Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\vstsdk2.4\pluginterfaces\vst2.x\vstfxstore.h">
+    <ClInclude Include="..\VST3 SDK\pluginterfaces\vst2.x\vstfxstore.h">
       <Filter>VSTSDK 2.4 Files</Filter>
     </ClInclude>
   </ItemGroup>
